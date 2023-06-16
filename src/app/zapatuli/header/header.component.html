@@ -1,0 +1,72 @@
+ <!--Inicio de la cabezera-->
+<header id="header">
+    <div id="logotipo">
+      <img src="../assets/img/logo3.png" alt="logotipo de la wed" 
+        [ngStyle]="{'filter': 'brightness(1.1)',
+        'mix-blend-mode': 'multiply'}" /> <!--con esto eliminamos el fondo de la img-->
+    </div>
+    <h1>
+      <a>{{encabezado}}</a>
+    </h1>
+</header>
+  <!--Fin de la cabezera-->  
+<!--INICIO DE LA MENU-->
+<nav id="nav">
+<ul>
+ <li>
+     <a [routerLink]="['/']">Inicio</a>
+ </li>
+ <li>
+     <a [routerLink]="['/zapatillas']">Zapatillas</a>
+ </li>
+ <li>
+    <a [routerLink]="['/']"></a>
+ </li>
+
+      <li>
+        <a href="zapatillas/zapatillas.component.html.html">Hombre</a>
+        <ul>
+          <!--Agregamos un menu despligable-->
+          <li>
+            <a>Adidas</a>
+         <!--usamos el target para abrir link en nueva pestaña
+        y el por fallas en tabnabbing-->
+          </li>
+          <li>
+            <a href="zapatillas/zapatillas.component.html.html">Head</a>
+          </li>
+          <li>
+            <a href="zapatillas/zapatillas.component.html.html">Nike</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="zapatillas/zapatillas.component.html.html">Mujer</a>
+        <ul>
+          <!--Agregamos un menu despligable-->
+          <li>
+            <a href="zapatillas/zapatillas.component.html.html">Fila</a>
+          </li>
+          <li>
+            <a href="zapatillas/zapatillas.component.html.html">Topper</a>
+          </li>
+          <li>
+            <a href="zapatillas/zapatillas.component.html.html">Gucci</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a [routerLink]="['/carrito']" [ngStyle]="{
+          'color':'rgb(137, 81, 137)',
+           'font-size':'16px'}">Carrito</a>
+      </li>
+      <li>
+        <a href="zapatillas/zapatillas.component.html.html">Ofertas</a>
+      </li>
+      <li>
+        <a href="zapatillas/zapatillas.component.html.html">Contacto</a>
+      </li>
+    </ul>
+  </nav>
+  <!--Fin del Menu-->

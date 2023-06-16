@@ -1,0 +1,129 @@
+/*CABEZERA*/
+#header{
+    border: #666666 1px solid;
+    background-color: #285626;
+    min-width: 1024;
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+   
+}
+#header a{
+    text-decoration: none;
+}
+#header #logotipo{
+    width: 770px;
+    margin: 0px auto;
+    padding-top: 20px;
+
+}
+#header #logotipo img{
+    background: none;
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+    width: 180px;
+}
+#header h1{
+    text-align: center;
+    font-size: 40px;
+    color: #70b231;
+    font-family: "nevis";
+    letter-spacing: 4px;
+    margin-top: 10px;
+    /*para darle la sombra usamos el shadow*/
+   text-shadow: 0px 2px 1px #333333;
+   transition: all 800ms;
+}
+#header h1:hover{
+    text-shadow: 0px 2px 1px #333333, 0px 0px 20px #70b231 ;
+}
+
+#header h1 a{
+    color: #70b231;
+}
+
+/*BARRA DE NAVEGACION*/
+#nav{
+    width: 100%;
+    height: 40px;
+    background-color: #333333;
+    color: white;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 14px;
+    box-shadow: 0px 0px 4px gray;
+}
+#nav ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    width:800px;
+}
+
+#nav > ul >li{
+    line-height: 40px;
+    float: left;
+    border-right: 1px solid gray;
+    transition: all 500ms;
+}
+#nav > ul >li a{
+    display: block;
+    color: #eee;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#nav > ul >li a:first-child{
+    border-left: 1px solid gray;
+}
+/*le damos un hover a los li del menu*/
+
+#nav >ul> li:hover{
+    background-color: #70b231;
+    box-shadow: 0px 0px 10px green inset;
+}
+/*MENU DESPLEGABLE*/
+#nav >ul> li> ul{
+    display: none;
+    position: absolute; /*Para acomodar la posicion en la pantalla*/
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1; /*Para sobreponer sobre culaquier elemento*/
+    
+}
+#nav> ul> li:hover> ul{
+    display: block;
+}
+#nav> ul> li:hover> ul> li{
+    background-color: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px; /*este tamaño es un poco mas chico que los primeros elemento de la lista*/
+    transition: all 300ms;
+}
+#nav >ul> li:hover> ul> li a{
+ color: #666666;
+
+}
+#nav> ul> li:hover> ul> li:hover{
+    
+    box-shadow: 0px 2px 6px green inset;
+    background: #70b231;
+  
+}
+#nav >ul> li:hover> ul> li a:hover{
+    color: #666666;
+    font-size: 16px;
+}
+/*ENLACES*/
+a{
+    color: #529125;
+    text-decoration: none;
+}
+a:visited{
+    color: #529125;
+}
+a:hover{
+    color: #285626 ;
+}

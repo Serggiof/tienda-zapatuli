@@ -1,0 +1,34 @@
+
+<!--<div>
+    <h2>Detalles del Calzado</h2>
+    <p>Marca: {{ zapatillas.marca }}</p>
+    <p>Modelo: {{ zapatillas.modelo }}</p>
+    <p>Precio: {{ zapatillas.precio }}</p>
+    
+  </div>
+
+Contenedor para las imagenes tipo carrusel-->
+<div class="contenedor">
+    <div class="card">
+       <ul>
+        <li class="producto" *ngFor="let producto of zapatillas">
+           <div class="tag">Oferta</div>
+           <h3 class="modelo">{{producto.modelo}}</h3>
+           <img id="imagen" [src]="producto.imagen" alt="">
+           <div class="precio" ><span>$ </span>{{producto.precio}}</div>
+           <div id="marca">{{producto.marca}}</div> 
+           <button class="boton" (click)="addCarrito()">Comprar</button>
+           
+        </li>
+       </ul>
+    </div>
+    
+
+</div>
+ <!--
+    [ngStyle]="{'filter': 'brightness(1.1)',
+        'mix-blend-mode': 'multiply'}"
+    
+         <img src="../assets/img/nike.1.jpg" alt="FOTO_NIKE" >
+        
+    -->

@@ -17,15 +17,26 @@ Contenedor para las imagenes tipo carrusel-->
            <img id="imagen" [src]="producto.imagen" alt="">
            <div class="precio" ><span>$ </span>{{producto.precio}}</div>
            <div id="marca">{{producto.marca}}</div> 
-           <button class="boton" (click)="addCarrito()">Comprar</button>
+           <button class="boton" (click)="addCarrito(producto)">Añadir carrito</button>
            
         </li>
        </ul>
     </div>
-    
-
 </div>
- <!--
+
+ <!--<p>CARRITO DE COMPRAS</p>
+<div class="caja-carrito">
+<ul>
+    <li class="lista" *ngFor="let producto of carrito">
+      <img class="mini-img" [src]="producto.imagen">
+      <h3>{{ producto.marca }} {{ producto.modelo }}</h3>
+      <p>Precio: {{ producto.precio }}</p>
+    </li>
+  </ul>
+</div>
+
+
+
     [ngStyle]="{'filter': 'brightness(1.1)',
         'mix-blend-mode': 'multiply'}"
     

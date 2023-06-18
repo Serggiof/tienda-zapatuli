@@ -8,6 +8,7 @@ import { HeaderComponent } from './zapatuli/header/header.component';
 import { HomeComponent } from './zapatuli/home/home.component';
 import { CarritoComponent } from './zapatuli/carrito/carrito.component';
 import { CalzadoComponent } from './zapatuli/calzado/calzado.component';
+import { CarritoService } from './zapatuli/servicios/carrito.service';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,13 @@ import { CalzadoComponent } from './zapatuli/calzado/calzado.component';
     HeaderComponent,
     HomeComponent,
     CarritoComponent,
-    CalzadoComponent
+    CalzadoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CarritoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

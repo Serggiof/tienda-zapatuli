@@ -1,16 +1,17 @@
-
 <div class="caja-carrito">
   <div class="lista">
-    <h3>Producto seleccionado:</h3>
+    <h3>Productos seleccionados:</h3>
     <ul>
-      <li>
-        <h4>{{ productoSeleccionado.modelo }}</h4>
-        <img class="mini-img" [src]="productoSeleccionado.imagen" alt="">
-        <p>Precio: $ {{ productoSeleccionado.precio }}</p>
-        <p>Marca: {{ productoSeleccionado.marca }}</p>
+      <li *ngFor="let producto of productosSeleccionados">
+        <h4>{{ producto.modelo }}</h4>
+        <img class="mini-img" [src]="producto.imagen" alt="">
+        <p>Precio: $ {{ producto.precio }}</p>
+        <p>Marca: {{ producto.marca }}</p>
       </li>
     </ul>
   </div>
 </div>
+
+
 
     

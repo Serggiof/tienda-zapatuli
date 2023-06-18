@@ -20,13 +20,7 @@ export class CalzadoComponent implements OnInit{
 
   constructor(private _zapatillaService: ZapatillaService,
               private _carritoService: CarritoService){
-   /*this.zapatillas = [
-      new Zapatilla('NIKE', 'AIR-MAX', 29500, '../assets/img/nike-2.jpg'),
-      new Zapatilla('PUMA', 'SHUFFLE', 24500, '../assets/img/puma-1.jpg'),
-      new Zapatilla('ASICS', 'GEL-NIMBU-25', 75500, '../assets/img/asics-1.jpg'),
-      new Zapatilla('VANS', 'URBAN', 38100, '../assets/img/vans-1.jpg')
-    ]*/
-  
+   
   }
   
   ngOnInit(): void {
@@ -35,12 +29,13 @@ export class CalzadoComponent implements OnInit{
    // inicializamos el array de zapatilas
   
     }
-  
-  addCarrito(producto: any) {
-    // Lógica para agregar al carrito
-    this._carritoService.setProductoSeleccionado(producto);
+    addCarrito(producto: any) {
+      this._carritoService.agregarProducto(producto);
+    }
 
-  }
+
+
+    
   /*FUCIONES SIN FUNCIONAMIENTO
    addCarrito(producto: any) {
     // Lógica para agregar al carrito
@@ -56,5 +51,11 @@ export class CalzadoComponent implements OnInit{
   } */
   /*addCarrito(zapatilla: Zapatilla){
   this.carrito.push(zapatilla);
+  }
+  /*
+  addCarrito(producto: any) {
+    // Lógica para agregar al carrito
+    this._carritoService.setProductoSeleccionado(producto);
+
   }*/
 }

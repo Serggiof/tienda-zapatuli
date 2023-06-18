@@ -3,6 +3,7 @@ import { Zapatilla } from "../models/zapatilla";
 @Injectable()
 export class ZapatillaService{
     public zapatillas: Array<Zapatilla>
+    //cagamos el array por un servicio
     constructor(){
         this.zapatillas = [
             new Zapatilla('NIKE', 'AIR-MAX', 29500, '../assets/img/nike-2.jpg'),
@@ -14,5 +15,4 @@ export class ZapatillaService{
     getZapatillas(): Array<Zapatilla>{
         return this.zapatillas
     }
- 
 }

@@ -9,11 +9,10 @@ import { CarritoService } from '../servicios/carrito.service';
  
 })
 export class CarritoComponent implements OnInit{
-  
- public productoSeleccionado: any
+  productosSeleccionados: any[];
+
   constructor(private _carritoService: CarritoService) { 
-    this.productoSeleccionado = this._carritoService.productoSeleccionado;
-    //this.productoSeleccionado = this._carritoService.getProductosSeleccionados();
+    this.productosSeleccionados = this._carritoService.obtenerProductosSeleccionados();
   }
 
   ngOnInit(): void {

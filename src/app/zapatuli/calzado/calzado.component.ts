@@ -13,8 +13,13 @@ import { CarritoService } from '../servicios/carrito.service';
 export class CalzadoComponent implements OnInit{
 //Creamos un array zapatillas para recorre la clase Zapatilla
  public zapatillas!: Array<Zapatilla>
-  
-  //public zapas: String[];
+ //El signo de exclamación (!) se utiliza para indicar que una variable no es nula (non-null assertion).
+ 
+  // String para capturar lo que quiere buscar el usuario
+  dataInputSearch= ''
+  // Creamos un array para guardar la busqueda del usuario
+  zapasData: Zapatilla[] = [];
+ 
   // Array carrito para almacenar los datos seleccionados
   public carrito: Zapatilla[] = [];
 
@@ -29,8 +34,22 @@ export class CalzadoComponent implements OnInit{
    // inicializamos el array de zapatilas
   
     }
-    addCarrito(producto: any) {
+
+              /*! FUNCIONES ¡*/  
+  //Funcion para agregar al carrito  
+  addCarrito(producto: any) {
       this._carritoService.agregarProducto(producto);
+    }
+
+  //Funcion para la busqueda de un articulo por marca  
+  public buscarZapa() {
+      const zapasFilter: Zapatilla[] = [];
+      this.zapatillas.forEach(el =>{
+        if (el.marca.toLocaleLowerCase().includes(this.dataInputSearch.toLocaleLowerCase())){
+        zapasFilter.push(el);
+      }else{}
+    })
+      this.zapasData = zapasFilter
     }
 
 

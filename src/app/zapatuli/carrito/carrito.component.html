@@ -1,17 +1,22 @@
 <div class="caja-carrito">
-  <div class="lista">
-    <h3>Productos seleccionados:</h3>
-    <ul>
-      <li *ngFor="let producto of productosSeleccionados">
-        <h4>{{ producto.modelo }}</h4>
-        <img class="mini-img" [src]="producto.imagen" alt="">
-        <p>Precio: $ {{ producto.precio }}</p>
-        <p>Marca: {{ producto.marca }}</p>
-      </li>
-    </ul>
-  </div>
+  <table class="lista">
+    <thead>
+      <th></th>
+      <th></th>
+      <th></th>
+    </thead>
+    <tbody> 
+        <tr *ngFor="let producto of productosSeleccionados">
+          <td><img class="mini-img" [src]="producto.imagen" alt=""></td>
+          <td>{{producto.marca}}  {{ producto.modelo }}</td>
+          <td>Precio: $ {{ producto.precio }}</td>
+          <span><button class="btn btn-danger" (click)="eliminarProducto(producto)">❌</button></span>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Total</td>
+          <td>$ {{calcularTotal()}}</td>
+        </tr>
+    </tbody>
+  </table>
 </div>
-
-
-
-    

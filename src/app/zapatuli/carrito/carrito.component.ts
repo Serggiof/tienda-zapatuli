@@ -19,6 +19,23 @@ export class CarritoComponent implements OnInit{
    
   }
   /*FUNCIONES*/
+  
+eliminarProducto(producto: any) {
+  const indice = this.productosSeleccionados.indexOf(producto);
+  if (indice !== -1) {
+    this.productosSeleccionados.splice(indice, 1);
+  }
+}
+
+calcularTotal(){
+  let total=0;
+  for (const producto of this.productosSeleccionados) {
+    total += producto.precio;
+  }
+  return total;
+}
+
+
  /* getCarrito(carrito: Zapatilla){
     return this.carrito
 }*/

@@ -1,3 +1,4 @@
+<!--CARUSEL DE IMAGENES-->
 <div class="contenedor">
     <div class="card">
        <ul>
@@ -12,6 +13,22 @@
        </ul>
     </div>
 </div>
+<!--BOTON DE BUSQUEDA-->
+<div class="bus-cont">
+       <h1>Prueba con buscar la zapatilla que queres aqui</h1>
+       <input type="text" placeholder="Escribir algo aquí" [(ngModel)]="dataInputSearch" (keyup.enter)="buscarZapa()">
+       <button (click)="buscarZapa()">Buscar</button>
+
+    <li class="bus-producto" *ngFor="let zapatilla of zapasData">
+       <h3 class="bus-modelo">{{zapatilla.modelo}}</h3>
+       <img class="bus-imagen" id="imagen" [src]="zapatilla.imagen" alt="">
+       <div class="bus-precio"><span>$ </span>{{zapatilla.precio}}</div>
+       <div id="marca">{{zapatilla.marca}}</div>
+    </li>
+</div>
+
+
+
  <!--<p>CARRITO DE COMPRAS</p>
     [ngStyle]="{'filter': 'brightness(1.1)',
         'mix-blend-mode': 'multiply'}"

@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CarritoComponent } from './zapatuli/carrito/carrito.component';
-import { HomeComponent } from './zapatuli/home/home.component';
+
+
 import { CalzadoComponent } from './zapatuli/calzado/calzado.component';
 import { ContactoComponent } from './zapatuli/contacto/contacto.component';
-
+import { CarritoComponent } from './zapatuli/carrito/carrito.component';
+import { HomeComponent } from './zapatuli/home/home.component';
 const routes: Routes = [
-  {path:'', pathMatch:'full', redirectTo:'home'},
+
+  {path: '', component: HomeComponent},
   {path:'home', component:HomeComponent},
   {path:'carrito', component:CarritoComponent},
   {path:'calzado', component:CalzadoComponent},
-  {path:'contacto', component: ContactoComponent }
+  {path:'contacto', component: ContactoComponent },
+  {path: '**', component:HomeComponent }
 
-];
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

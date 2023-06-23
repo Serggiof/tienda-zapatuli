@@ -3,7 +3,7 @@
     border: #666666 1px solid;
     background-color: #285626;
     min-width: 1024;
-    width: 100%;
+    width: auto;
     height: 250px;
     margin: 0px auto;
    
@@ -127,3 +127,12 @@ a:visited{
 a:hover{
     color: #285626 ;
 }
+.icon img{
+    border-left: none;
+    width: 30px;
+    height: 40px;
+    display: block;
+
+
+}
+

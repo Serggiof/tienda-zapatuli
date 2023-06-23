@@ -3,6 +3,7 @@ import { Zapatilla } from '../models/zapatilla';
 import { ZapatillaService } from '../servicios/zapatilla.service';
 import { CarritoService } from '../servicios/carrito.service';
 
+
 @Component({
   selector: 'app-calzado',
   templateUrl: './calzado.component.html',
@@ -16,15 +17,21 @@ export class CalzadoComponent implements OnInit{
  //El signo de exclamación (!) se utiliza para indicar que una variable no es nula (non-null assertion).
  
   // String para capturar lo que quiere buscar el usuario
-  dataInputSearch= ''
+ dataInputSearch= ''
   // Creamos un array para guardar la busqueda del usuario
   zapasData: Zapatilla[] = [];
- 
+  //public cantidadCarrito: number = 0;
   // Array carrito para almacenar los datos seleccionados
   public carrito: Zapatilla[] = [];
+  
+  cantidadCarrito: number = 0; // Variable para almacenar la cantidad de productos en el carrito
+
+  //Array para los talles
+ //public talles: Array<number>=[36, 39, 40, 42, 43]
 
   constructor(private _zapatillaService: ZapatillaService,
-              private _carritoService: CarritoService){
+              private _carritoService: CarritoService
+              ){
    
   }
   
@@ -32,17 +39,20 @@ export class CalzadoComponent implements OnInit{
    // console.log(this.zapatillas)
     this.zapatillas = this._zapatillaService.getZapatillas()
    // inicializamos el array de zapatilas
-  
+    this._carritoService.agregarProducto
     }
 
               /*! FUNCIONES ¡*/  
   //Funcion para agregar al carrito  
   addCarrito(producto: any) {
       this._carritoService.agregarProducto(producto);
+     // this.cantidadCarrito = this._carritoService.obtenerProductosSeleccionados().length;
+     
+      
     }
 
   //Funcion para la busqueda de un articulo por marca  
-  public buscarZapa() {
+ public buscarZapa() {
       const zapasFilter: Zapatilla[] = [];
       this.zapatillas.forEach(el =>{
         if (el.marca.toLocaleLowerCase().includes(this.dataInputSearch.toLocaleLowerCase())){
@@ -51,9 +61,9 @@ export class CalzadoComponent implements OnInit{
     })
       this.zapasData = zapasFilter
     }
+    /*Funcion para sumar carro   */
 
-
-
+ 
     
   /*FUCIONES SIN FUNCIONAMIENTO
    addCarrito(producto: any) {

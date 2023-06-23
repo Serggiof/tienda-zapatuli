@@ -7,10 +7,12 @@ export class CarritoService{
 
   agregarProducto(producto: any) {
     this.productosSeleccionados.push(producto);
+    
   }
 
   obtenerProductosSeleccionados() {
     return this.productosSeleccionados;
+
   }
     
       /*FUCIONES SIN FUNCIONAMIENTO

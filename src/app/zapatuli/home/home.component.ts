@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit{
   ngOnInit(){
     setInterval(() => {
       this.changeImage();
-    }, 3000); // Cambia la imagen cada 2 segundos (ajusta el valor según tus necesidades)
+    }, 3000); // Cambia la imagen cada 3 segundos (ajusta el valor según tus necesidades)
   }
   
   

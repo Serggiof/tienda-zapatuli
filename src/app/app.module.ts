@@ -12,6 +12,7 @@ import { CalzadoComponent } from './zapatuli/calzado/calzado.component';
 import { CarritoService } from './zapatuli/servicios/carrito.service';
 import { ContactoComponent } from './zapatuli/contacto/contacto.component';
 import { HomeComponent } from './zapatuli/home/home.component';
+import { RegistroComponent } from './zapatuli/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomeComponent } from './zapatuli/home/home.component';
     CalzadoComponent,
     ContactoComponent,
     HomeComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,

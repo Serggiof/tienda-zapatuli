@@ -1,0 +1,7 @@
+<h2>Detalles de la zapatilla</h2>
+<div *ngIf="zapatilla">
+  <p class="marca">{{ zapatilla.marca }}</p>
+  <img [src]="zapatilla.imagen" alt="Imagen de la zapatilla">
+  <h3>{{ zapatilla.modelo }}</h3>
+  <p>Precio: ${{ zapatilla.precio }}</p>
+</div>

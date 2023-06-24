@@ -128,11 +128,23 @@ a:hover{
     color: #285626 ;
 }
 .icon img{
-    border-left: none;
+    
     width: 30px;
     height: 40px;
     display: block;
-
-
 }
+
+.badge-notify{
+    background:red;
+    position:relative;
+    top: -18px;
+    left: -5px;
+    border-radius: 5px;
+    padding: 0 3px;
+    width: 0.7rem;
+    font-size: 1.2 rem;
+    font-weight: bold;
+}
+
+
 

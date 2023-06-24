@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Zapatilla } from '../models/zapatilla';
 import { ZapatillaService } from '../servicios/zapatilla.service';
 import { CarritoService } from '../servicios/carrito.service';
+import { ContadorService } from '../servicios/contador.service';
 
+// importe la clase y tambien en el module.ts
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-calzado',
@@ -30,7 +33,11 @@ export class CalzadoComponent implements OnInit{
  //public talles: Array<number>=[36, 39, 40, 42, 43]
 
   constructor(private _zapatillaService: ZapatillaService,
-              private _carritoService: CarritoService
+              private _carritoService: CarritoService,
+              private _contadorService:ContadorService,
+              // Cree un contructor del router
+              private router: Router
+            
               ){
    
   }
@@ -52,14 +59,42 @@ export class CalzadoComponent implements OnInit{
     }
 
   //Funcion para la busqueda de un articulo por marca  
- public buscarZapa() {
-      const zapasFilter: Zapatilla[] = [];
-      this.zapatillas.forEach(el =>{
-        if (el.marca.toLocaleLowerCase().includes(this.dataInputSearch.toLocaleLowerCase())){
+  public buscarZapa() {
+    // Creamos un arreglo vacio para almacenar las zapatillas filtradas
+    const zapasFilter: Zapatilla[] = [];
+    // Iteramos el array usando el metodo forEach
+    this.zapatillas.forEach(el => {
+      //para cada elemento "el" en el arreglo zapatillas se realiza una verificacion de la marca (La condición)
+      //Se verifica si el nombre de la marca de la zapatilla actual (el.marca) contiene el 
+      //valor de this.dataInputSearch, que representa el término de búsqueda ingresado por el usuario.
+      if (el.marca.toLocaleLowerCase().includes(this.dataInputSearch.toLocaleLowerCase())) {
+        //Si la condicion es verdadera la zapatilla actual se agrega al arreglo "zapasFilter", utilizando el metodo "push()"
         zapasFilter.push(el);
-      }else{}
+      } else { } // Si no coincide no sucede nada
     })
-      this.zapasData = zapasFilter
+    //Al finalizar el bucle forEach(), el arreglo zapasData se actualiza con los resultados filtrados almacenados en zapasFilter. 
+    //Esto asegura que los resultados de búsqueda se muestren en la interfaz de usuario.
+    this.zapasData = zapasFilter
+  }
+  public verDescripcion(zapatillaId: number) {
+    // Aquí puedes redirigir al enlace correspondiente a la descripción del producto
+    // El router de Angular se usa para navegar a la ruta deseada
+    // Por ejemplo:
+    this.router.navigate(['/descripcion', zapatillaId]);
+  }
+
+
+
+    //Funcion para agregar numero al badge del carrito
+    public count: number = 0;
+    sendNumber() {
+      this._contadorService.sendNumber(this.increament());
+    }
+
+    increament() {
+     this.count += 1;
+      console.log("done");
+      return this.count;
     }
     /*Funcion para sumar carro   */
 

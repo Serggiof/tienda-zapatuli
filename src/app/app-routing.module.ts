@@ -7,6 +7,8 @@ import { ContactoComponent } from './zapatuli/contacto/contacto.component';
 import { CarritoComponent } from './zapatuli/carrito/carrito.component';
 import { HomeComponent } from './zapatuli/home/home.component';
 import { RegistroComponent } from './zapatuli/registro/registro.component';
+import { DescripcionComponent } from './zapatuli/descripcion/descripcion.component';
+
 const routes: Routes = [
 
   {path: '', component: HomeComponent},// path que se muestra al inicio de la app
@@ -15,6 +17,7 @@ const routes: Routes = [
   {path:'calzado', component:CalzadoComponent},
   {path:'contacto', component: ContactoComponent },
   {path: 'registro', component: RegistroComponent},
+  { path: 'descripcion/:id', component: DescripcionComponent },
   {path: '**', component:HomeComponent } // path para la redireccion 404
 
 ]

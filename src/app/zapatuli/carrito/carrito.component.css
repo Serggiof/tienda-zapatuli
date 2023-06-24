@@ -36,6 +36,9 @@ td{
     border-radius: 100%;
     font-size: 30px;
 }
+.btn-danger:hover{
+    cursor: pointer;
+}
 .link{
     width: 200px;
     height: auto;

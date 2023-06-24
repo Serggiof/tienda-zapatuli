@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { Subscription } from 'rxjs';
+import { ContadorService } from '../servicios/contador.service';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +9,12 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   public encabezado= 'ZAPATULI'
+
+  number: any;
+  subscription: Subscription;
+
+  constructor(private _contadorService: ContadorService) {
+    this.subscription = this._contadorService.getNumber().subscribe(number => { this.number = number });
+  }
   
 }

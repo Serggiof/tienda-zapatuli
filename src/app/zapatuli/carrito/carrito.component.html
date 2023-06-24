@@ -4,16 +4,17 @@
 <div class="caja-carrito">
   <table class="lista">
     <thead>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Producto</th>
+      <th>Precio</th>
+      <th>Talle</th>
     </thead>
     <tbody> 
         <tr *ngFor="let producto of productosSeleccionados">
-          <td><img class="mini-img" [src]="producto.imagen" alt=""></td>
-          <td>{{producto.marca}}  {{ producto.modelo }}</td>
-          <td>Precio: $ {{ producto.precio }}</td>
-          <td>{{producto.talles}}</td>
+          <td><img class="mini-img" [src]="producto.imagen" alt="">{{producto.marca}}{{ producto.modelo }}</td>
+          <td> $ {{ producto.precio }}</td>
+          <td><select [(ngModel)]="producto.talles">
+            <option *ngFor="let talle of producto.talles" [value]="talle">{{ talle }}</option>
+         </select></td>
           <span><button class="btn btn-danger" (click)="eliminarProducto(producto)">❌</button></span>
         </tr>
         <tr>

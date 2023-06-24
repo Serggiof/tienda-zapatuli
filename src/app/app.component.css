@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'ScandinaviaBrush';
+    src: url('src/assets/fonts/ScandinaviaBrush_PERSONAL_USE_ONLY.otf') format('truetype');
+    font-family: 'BirdsofParadise';
+    src: url('src/assets/fonts/Birds of Paradise © PERSONAL USE ONLY.ttf');
+    
+  }
 .contenedor{
     width: 100%;
     height: 350px;

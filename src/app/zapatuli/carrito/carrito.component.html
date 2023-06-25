@@ -28,9 +28,9 @@
         <tr>
           <td 
             ></td>
+
             <!-- Aplicamos un condicional para aplicar un borde superior cuando 
                  el total sea mayor a 0  -->
-
           <td *ngIf="calcularTotal() > 0" 
             [style.border-top]="calcularTotal() > 0 ? ' 1px solid black' : 'transparent'">Total</td>
 

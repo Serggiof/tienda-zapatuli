@@ -36,6 +36,9 @@ import { FooterComponent } from './zapatuli/footer/footer.component';
     FormsModule,
     RouterModule.forRoot([])
   ],
+  /**Cargamos atraves de los
+   * providers los servicion para que sean inyectados en los
+   * diferentes componentes */
   providers: [CarritoService,ZapatillaService],
   bootstrap: [AppComponent]
 })

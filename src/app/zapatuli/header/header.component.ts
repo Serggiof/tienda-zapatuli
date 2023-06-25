@@ -16,5 +16,8 @@ export class HeaderComponent {
   constructor(private _contadorService: ContadorService) {
     this.subscription = this._contadorService.getNumber().subscribe(number => { this.number = number });
   }
-  
+  /**Pasamos por el contructor el sevicio contador para que la informacion
+   * viaje y se visualize en nuestro header y hacemos llamado del los metodos
+   * corespondientes de esta accion
+   */
 }

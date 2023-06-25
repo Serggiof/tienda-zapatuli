@@ -15,4 +15,7 @@ export class ContadorService {
   getNumber():Observable<any>{
     return this.subject.asObservable();
   }
+  /**Este metodo nos devuelve el cada seleccion para enviarla al header
+   * y asi visualisamos el numero de los productos que temos en el carrito
+   */
 }

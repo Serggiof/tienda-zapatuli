@@ -2,30 +2,21 @@ import { Injectable } from "@angular/core";
 @Injectable()
 
 export class CarritoService{
-  //Array para agregar los objetos seleccionados para la lista
+  /*Creamos un array para almacenar los productos seleccionados */
   productosSeleccionados: any[] = [];
 
   agregarProducto(producto: any) {
     this.productosSeleccionados.push(producto);
-    
+    /** Usamos este metodo para hacer el push al array de productosSeleccionados
+     * para cargar el mismo con lo elegido
+     */
   }
 
   obtenerProductosSeleccionados() {
     return this.productosSeleccionados;
-
+    /**Este metodo simpliemente nos devuelve el array para
+     * usarlos en los componetes carrito y calzado
+      */
   }
     
-      /*FUCIONES SIN FUNCIONAMIENTO
-      addProductoSeleccionado(producto: any) {
-        this.productosSeleccionados.push(producto);
-      }
-      getProductosSeleccionados() {
-        return this.productosSeleccionados;
-      }
-      //productosSeleccionados: any[] = [];
-    /*productoSeleccionado: any;
-
-    setProductoSeleccionado(producto: any) {
-        this.productoSeleccionado = producto;
-      }*/
 }

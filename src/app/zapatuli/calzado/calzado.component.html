@@ -2,7 +2,7 @@
 <div class="bus-cont">
    <div>
    <input class="bus-input" type="text" placeholder="Escribir algo aquí" [(ngModel)]="dataInputSearch" (keyup.enter)="buscarZapa()">
-   <button (click)="buscarZapa()"> Buscar
+   <button id="bt-buscar" (click)="buscarZapa()"> Buscar
       <!-- <img class="bus-lupa" src="../assets/icons/lupa.png" alt="lupa"> -->
    </button>
  </div>
@@ -15,10 +15,11 @@
          <!--se crea un botón que tiene un atributo click que está vinculado a la función verDescripcion(zapatilla.id). 
             Cuando el botón es clicado,  se invocará la función verDescripcion y 
             se pasará como argumento el valor zapatilla.id.  -->
-         <button (click)="verDescripcion(zapatilla.id)">Ver Descripción</button>
+         <button id="bt-descripcion" (click)="verDescripcion(zapatilla.id)">Ver Descripción</button>
       </li>
    </ul>
 </div>
+
 <!--CARUSEL DE IMAGENES-->
 <div class="contenedor">
     <div class="card">

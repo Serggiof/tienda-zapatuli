@@ -18,7 +18,7 @@ export class DescripcionComponent implements OnInit {
     private route: ActivatedRoute,
     // El siguiente parametro se utiliza para acceder al servicio de zapatillas respectivamente.
     private _zapatillaService: ZapatillaService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {

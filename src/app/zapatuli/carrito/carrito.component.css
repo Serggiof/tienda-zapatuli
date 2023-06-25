@@ -1,22 +1,29 @@
-.caja-carrito{
+.cont-carrito{
     width: 75%;
     font-family: sans-serif, Arial, Helvetica;
     font-size: 15px;
-    color: white;
+    color: rgb(28, 27, 27);
     margin: 0 auto;
     border-radius: 15px;
+    margin-bottom: 200px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    
 }
 .lista{
+    border:hsla(0, 8%, 81%, 0.514) 2px solid;
     width: 100%;
-    border: 3px black solid;
-    background-color: #285626;
+    background-color: rgba(134, 132, 132, 0.898);
     margin-top: 2%;
-    border-radius: 10px;
+    border-radius: 10px; 
+    margin-bottom: 10px;
+    
 }
 
 .mini-img{
-    width: 80px;
-    height: 60px;
+    width: 100px;
+    height: 80px;
+    margin-right: 50px;
+    background-color: transparent !important;    
 }
 
 tr{
@@ -25,8 +32,9 @@ tr{
 }
 td{
     text-align: center;
-    border-color: black;
+    border-color: transparent;
     border-style: solid;
+    
 }
 
 .btn-danger{
@@ -39,7 +47,20 @@ td{
 .btn-danger:hover{
     cursor: pointer;
 }
-.link{
+.cont-carrito .lista> tbody> tr >td >span{
+    font-size: 16px;
+    margin-right: 10px;
+}
+.cont-carrito .lista> tbody> tr >td #desc{
+
+margin-right: 25px;
+}
+
+
+
+
+  /*BOTON SEGUIR COMPRANDO*/
+  .link{
     width: 200px;
     height: auto;
     margin-left: 20%;
@@ -67,3 +88,4 @@ td{
     background-color: #70b231;
     box-shadow: 0px 0px 10px green inset;
 }
+/*FIN DE BOTON*/

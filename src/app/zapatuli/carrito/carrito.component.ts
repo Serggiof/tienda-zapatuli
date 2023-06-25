@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Zapatilla } from '../models/zapatilla';
 import { CarritoService } from '../servicios/carrito.service';
 
 @Component({
@@ -11,13 +10,12 @@ import { CarritoService } from '../servicios/carrito.service';
 export class CarritoComponent implements OnInit{
   productosSeleccionados: any[];
 
-  constructor(private _carritoService: CarritoService) { 
+  constructor(private _carritoService: CarritoService){ 
+
     this.productosSeleccionados = this._carritoService.obtenerProductosSeleccionados();
   }
-
-  ngOnInit(): void {
-   
-  }
+  ngOnInit(): void {}
+  
   /*FUNCIONES*/
   
 eliminarProducto(producto: any) {

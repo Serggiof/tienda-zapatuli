@@ -1,7 +1,12 @@
 
 
+
 <div class="link"><a [routerLink]="['/calzado']">Seguir comprado</a></div>
-<div class="caja-carrito">
+
+<!-- prueba de carrito  -->
+
+<!--  -->
+<div class="cont-carrito">
   <table class="lista">
     <thead>
       <th>Producto</th>
@@ -10,17 +15,28 @@
     </thead>
     <tbody> 
         <tr *ngFor="let producto of productosSeleccionados">
-          <td><img class="mini-img" [src]="producto.imagen" alt="">{{producto.marca}}{{ producto.modelo }}</td>
+          <td><img class="mini-img" [src]="producto.imagen" alt="">
+              <span id="desc">{{producto.marca}}</span> <span>{{ producto.modelo }}</span> </td>
           <td> $ {{ producto.precio }}</td>
-          <td><select [(ngModel)]="producto.talles">
+          <td>
+            <select [(ngModel)]="producto.talles">
             <option *ngFor="let talle of producto.talles" [value]="talle">{{ talle }}</option>
-         </select></td>
+            </select>
+          </td>
           <span><button class="btn btn-danger" (click)="eliminarProducto(producto)">❌</button></span>
         </tr>
         <tr>
-          <td></td>
-          <td>Total</td>
-          <td>$ {{calcularTotal()}}</td>
+          <td 
+            ></td>
+            <!-- Aplicamos un condicional para aplicar un borde superior cuando 
+                 el total sea mayor a 0  -->
+
+          <td *ngIf="calcularTotal() > 0" 
+            [style.border-top]="calcularTotal() > 0 ? ' 1px solid black' : 'transparent'">Total</td>
+
+          <td *ngIf="calcularTotal() > 0" 
+            [style.border-top]="calcularTotal() > 0 ? ' 1px solid black' : 'transparent'">$ {{calcularTotal()}}</td>
+
         </tr>
     </tbody>
   </table>

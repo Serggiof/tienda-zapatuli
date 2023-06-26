@@ -36,6 +36,9 @@ export class CarritoComponent implements OnInit{
   }
   return total;
  }
+ finalizarCompra(): void {
+  
+ }
 
 }
 

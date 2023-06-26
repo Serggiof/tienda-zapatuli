@@ -1,0 +1,64 @@
+
+<div class="container">
+    <h1 class="titulo">Checkout de Pago</h1>
+    <!-- Formulario de información de facturación -->
+    <form>
+      <h2 class="subtitulos">Información de Facturación</h2>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion">
+      </div>
+      <div class="form-group">
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad">
+      </div>
+      <div class="form-group">
+        <label for="provincia">Provincia:</label>
+        <input type="text" id="provincia" name="provincia">
+      </div>
+      <div class="form-group">
+        <label for="cp">Código Postal:</label>
+        <input type="number" id="cp" name="cp">
+      </div>
+      
+      <!-- Opciones de envío -->
+      <h2 class="subtitulos">Opciones de Envío</h2>
+      <div class="form-group">
+        <label for="envio">Método de Envío:</label>
+        <select id="envio" name="envio">
+          <option value="envio_estandar">Envío Estándar</option>
+          <option value="envio_rapido">Envío Rápido</option>
+          <!-- Agrega más opciones de envío según tus necesidades -->
+        </select>
+      </div>
+  
+      <h2 class="subtitulos">Datos de la tarjeta</h2>
+      <div class="form-group">
+        <label for="numero-tarjeta">Número de tarjeta:</label>
+        <input type="number" id="numero-tarjeta" name="numero-tarjeta">
+      </div>
+      <div class="form-group">
+        <label for="nombre-tarjeta">Nombre:</label>
+        <input type="text" id="nombre-tarjeta" name="nombre-tarjeta">
+      </div>
+      <div class="form-group">
+        <label for="fecha-venc">Vencimiento:</label>
+        <div class="vencimiento-inputs">
+          <input type="number" id="fecha-dia" name="fecha-dia" placeholder="Día" min="1" max="31">
+          <input type="number" id="fecha-mes" name="fecha-mes" placeholder="Mes" min="1" max="12">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="codigo">Código de Seguridad:</label>
+        <input type="password" id="codigo" name="codigo">
+      </div>
+  
+      <!-- Botón de Pago -->
+      <button type="button" onclick="realizarPago()">Realizar Pago</button>
+    </form>
+  </div>
+  

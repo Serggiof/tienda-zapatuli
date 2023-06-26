@@ -1,0 +1,85 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para el contenedor principal */
+  .container {
+    background-color: #aaa7a7;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(95, 88, 88, 0.3);
+  }
+  
+  /* Estilos para los títulos */
+  .titulo {
+    color:#45a049;
+    /* color: #fff; */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight:lighter;
+  }
+  
+  .subtitulos {
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para los campos de entrada */
+  input[type="text"],
+  input[type="number"],
+  select {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para el botón de pago */
+  button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos para los contenedores de campos de entrada */
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para los campos de entrada de vencimiento */
+  .vencimiento-inputs {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .vencimiento-inputs input {
+    width: calc(40% - 50px);
+  }
+ 

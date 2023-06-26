@@ -17,6 +17,7 @@ import { DescripcionComponent } from './zapatuli/descripcion/descripcion.compone
 import { ZapatillaService } from './zapatuli/servicios/zapatilla.service';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './zapatuli/footer/footer.component';
+import { CheckoutComponent } from './zapatuli/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FooterComponent } from './zapatuli/footer/footer.component';
     RegistroComponent,
     DescripcionComponent,
     FooterComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

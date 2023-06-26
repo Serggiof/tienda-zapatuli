@@ -8,17 +8,19 @@ import { CarritoComponent } from './zapatuli/carrito/carrito.component';
 import { HomeComponent } from './zapatuli/home/home.component';
 import { RegistroComponent } from './zapatuli/registro/registro.component';
 import { DescripcionComponent } from './zapatuli/descripcion/descripcion.component';
+import { CheckoutComponent } from './zapatuli/checkout/checkout.component';
 
 const routes: Routes = [
 
-  {path: '', component: HomeComponent},// path que se muestra al inicio de la app
+  {path:'', component: HomeComponent},// path que se muestra al inicio de la app
   {path:'home', component:HomeComponent},
   {path:'carrito', component:CarritoComponent},
   {path:'calzado', component:CalzadoComponent},
   {path:'contacto', component: ContactoComponent },
-  {path: 'registro', component: RegistroComponent},
-  { path: 'descripcion/:id', component: DescripcionComponent },
-  {path: '**', component:HomeComponent } // path para la redireccion 404
+  {path:'registro', component: RegistroComponent},
+  {path:'descripcion/:id', component: DescripcionComponent },
+  {path:'checkout', component:CheckoutComponent},
+  {path:'**', component:HomeComponent } // path para la redireccion 404
 
 ]
 
